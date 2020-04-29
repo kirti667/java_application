@@ -9,6 +9,9 @@ pipeline {
             } 
         }
         stage('Test') { 
+            agent {
+        label 'master'
+            }
             steps {
                echo 'Testing..'
             }
